@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-const base=import.meta.env.BASE_URL;
+const base=import.meta.env.BASE_URL.replace(/\/?$/,'/');
 const posts=Object.values(import.meta.glob('./*.md',{eager:true})).sort((a:any,b:any)=>new Date(b.frontmatter.date).getTime()-new Date(a.frontmatter.date).getTime()) as any[];
 const tags=[...new Set(posts.flatMap(p=>p.frontmatter.tags))];
 ---
