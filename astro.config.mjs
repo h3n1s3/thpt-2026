@@ -6,6 +6,7 @@ import rehypeKatex from 'rehype-katex';
 export default defineConfig({
   site: 'https://h3n1s3.github.io',
   base: '/thpt-2026/',
+  trailingSlash: 'always',
   integrations: [sitemap()],
   markdown: {
     remarkPlugins: [remarkMath],
