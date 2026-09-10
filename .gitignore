@@ -3,3 +3,5 @@ dist/
 .astro/
 .sites-runtime/
 work/
+outputs/
+_tmp_*.ps1
